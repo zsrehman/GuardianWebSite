@@ -18,6 +18,7 @@ A professional corporate website for Guardian Commercial Realty ("The Tenant's A
 - **Backend:** Express.js (serves the SPA)
 - **Build Tool:** Vite
 - **Form Handling:** react-hook-form + zod validation
+- **Database:** None (static content site, no database required)
 
 ## Pages
 - **Home** (`/`) - Hero with Robert Chavez quote, service cards, featured case studies, client logos, testimonial quote, guaranty section
