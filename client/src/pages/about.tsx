@@ -11,6 +11,10 @@ import {
   ArrowRight,
   Users,
   Briefcase,
+  GraduationCap,
+  Phone,
+  MapPin,
+  Landmark,
 } from "lucide-react";
 import { usePageTitle } from "@/hooks/use-page-title";
 
@@ -35,12 +39,62 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24" data-testid="section-executive-profile">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-16">
-            <div className="lg:col-span-2">
-              <h2 className="text-2xl font-bold text-foreground font-serif mb-6">Introduction</h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-2">Leadership</p>
+          <h2 className="text-3xl font-bold text-foreground font-serif mb-10">Executive Profile</h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-16">
+            <div className="lg:col-span-4">
+              <div className="sticky top-24 space-y-6">
+                <Card className="border-border/50 overflow-hidden" data-testid="card-executive-profile">
+                  <div className="relative">
+                    <img
+                      src="/images/robert-chavez-new.jpg"
+                      alt="Robert F. Chavez - President and CEO of Guardian Commercial Realty"
+                      className="w-full aspect-[3/4] object-cover object-top"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                      <h3 className="text-xl font-bold text-white font-serif">Robert F. Chavez</h3>
+                      <p className="text-white/80 text-sm font-medium">President & CEO</p>
+                    </div>
+                  </div>
+                  <CardContent className="p-5">
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <Phone className="h-4 w-4 text-primary shrink-0" />
+                        <span className="text-sm text-foreground">310.882.2050</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <MapPin className="h-4 w-4 text-primary shrink-0" />
+                        <span className="text-sm text-muted-foreground">Los Angeles, CA</span>
+                      </div>
+                      <div className="border-t border-border/50 pt-3 mt-3 space-y-2.5">
+                        <div className="flex items-center gap-3">
+                          <Briefcase className="h-4 w-4 text-primary shrink-0" />
+                          <span className="text-xs text-muted-foreground">40+ Years in Commercial Real Estate</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <Users className="h-4 w-4 text-primary shrink-0" />
+                          <span className="text-xs text-muted-foreground">$1 Billion+ in Completed Transactions</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <GraduationCap className="h-4 w-4 text-primary shrink-0" />
+                          <span className="text-xs text-muted-foreground">B.S., University of Southern California</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <Landmark className="h-4 w-4 text-primary shrink-0" />
+                          <span className="text-xs text-muted-foreground">CA State Parks & Recreation Commissioner</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            <div className="lg:col-span-8">
+              <div className="space-y-5 text-muted-foreground leading-relaxed">
                 <p>
                   Robert is President and Founder of Guardian Commercial Realty, a leading commercial realty advisory firm that exclusively represents the interests of commercial office and industrial tenants. In this role, he manages operations of the firm's transaction services in major markets throughout the United States.
                 </p>
@@ -60,30 +114,6 @@ export default function About() {
                   Robert is an avid outdoorsman and motor sports fan. He lives in Encino, California with his wife and daughter.
                 </p>
               </div>
-            </div>
-            <div>
-              <Card className="border-border/50 sticky top-24" data-testid="card-executive-profile">
-                <CardContent className="p-6 text-center">
-                  <img
-                    src="/images/robert-chavez.jpg"
-                    alt="Robert F. Chavez"
-                    className="w-48 h-48 mx-auto rounded-md object-cover object-top mb-4"
-                  />
-                  <h3 className="text-lg font-bold text-foreground">Robert F. Chavez</h3>
-                  <p className="text-sm text-primary font-medium mb-1">President & CEO</p>
-                  <p className="text-sm text-muted-foreground">310.882.2050</p>
-                  <div className="mt-4 pt-4 border-t border-border/50">
-                    <div className="flex items-center gap-2 justify-center mb-2">
-                      <Briefcase className="h-4 w-4 text-primary" />
-                      <span className="text-xs text-muted-foreground">40+ years in CRE</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <Users className="h-4 w-4 text-primary" />
-                      <span className="text-xs text-muted-foreground">$1B+ in transactions</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
 

@@ -127,9 +127,9 @@ export default function Home() {
             </div>
             <div className="hidden lg:block">
               <img
-                src="/images/robert-chavez.jpg"
+                src="/images/robert-chavez-new.jpg"
                 alt="Robert F. Chavez - President and CEO"
-                className="rounded-md opacity-90 max-h-96 object-contain mx-auto"
+                className="rounded-lg max-h-[420px] object-cover object-top mx-auto shadow-2xl"
               />
             </div>
           </div>
