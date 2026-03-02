@@ -1,0 +1,76 @@
+Build a simple, clean, responsive corporate website using Bootstrap 5 (no React). 
+This site is for a real estate / tenant representation company and must look professional and credible for a federal trademark requirement.
+
+TECH STACK
+- HTML5 + Bootstrap 5 + minimal custom CSS
+- Optional small JS for navbar / smooth scroll
+- No backend required
+- Contact form can be a placeholder (mailto link) OR submit to a dummy endpoint with validation messages.
+
+PROJECT STRUCTURE
+/ (root)
+  index.html
+  services.html
+  case-studies.html
+  testimonials.html
+  about.html
+  contact.html
+  privacy.html
+  assets/
+    css/styles.css
+    img/ (placeholders allowed)
+
+DESIGN / LAYOUT REQUIREMENTS
+- Use a top navigation bar with links: Home, Services, Case Studies, Testimonials, About, Contact
+- Use a clean modern corporate look. White background, strong typography, subtle section separators.
+- Fully responsive for mobile/tablet/desktop.
+- Add a footer with quick links + copyright + basic business info.
+- Use consistent spacing (Bootstrap container, sections with py-5).
+- Use placeholder images if real images not available.
+
+CONTENT REQUIREMENTS (use placeholders where exact wording isn’t given)
+- Home page:
+  - Hero section: Company Name "GuardianUSA" (or placeholder Company Name), tagline like "The Tenant’s Advocate"
+  - Short intro paragraph (2–3 lines) about tenant representation and advisory services
+  - 3–5 service cards summary (Tenant Rep, Portfolio Strategy, Transaction Services, Market Analysis, Negotiation Support)
+  - A featured case study teaser section (2 cards linking to case-studies.html)
+  - A testimonials teaser section (2 quotes linking to testimonials.html)
+  - Call-to-action section: “Start a conversation” button linking to contact.html
+
+- Services page:
+  - Title + short intro
+  - Service sections with headings and bullet points
+  - Include at least: Tenant Representation, Strategic Planning, Portfolio Services, Transaction Services
+
+- Case Studies page:
+  - Grid of 4 case study cards (placeholder details)
+  - Each card includes: project name, location, size, summary result
+
+- Testimonials page:
+  - List 6 testimonials as quote cards (placeholders ok)
+
+- About page:
+  - Company overview
+  - Mission, Vision, Core Competencies
+  - Optional short “Leadership” section with 1 profile card (placeholder)
+
+- Contact page:
+  - Contact form: Name, Email, Phone, Message
+  - Contact details section: address/phone/email placeholders
+  - Show success/error client-side validation (Bootstrap validation)
+
+- Privacy page:
+  - Simple privacy policy template text (short)
+
+IMPLEMENTATION DETAILS
+- Use Bootstrap components: navbar, hero (jumbotron style), cards, grid, accordion (optional), forms, footer.
+- Put shared elements (navbar + footer) duplicated in each HTML file (since no templating).
+- Add a small custom CSS file for brand colors and spacing.
+- Ensure all pages have proper <title>, meta description placeholders, and favicon placeholder.
+- Add a README.md explaining how to run locally and how to deploy.
+
+DELIVERABLES
+- Generate all HTML pages with complete structure and placeholder copy.
+- Include assets/css/styles.css with minimal styling.
+- Ensure links between pages work.
+- Make sure everything runs by just opening index.html (static hosting ready).
