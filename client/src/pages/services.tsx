@@ -3,12 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import {
-  Building2,
-  BarChart3,
+  ClipboardList,
+  FileSearch,
+  ShieldCheck,
   Handshake,
-  Search,
-  Target,
-  Briefcase,
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
@@ -16,87 +14,65 @@ import { usePageTitle } from "@/hooks/use-page-title";
 
 const services = [
   {
-    icon: Building2,
-    title: "Tenant Representation",
-    description:
-      "As your exclusive advocate, we represent only tenants — never landlords. This eliminates conflicts of interest and ensures our advice is always aligned with your goals.",
-    bullets: [
-      "Lease negotiation and renewal strategy",
-      "New office, industrial, and retail space acquisition",
-      "Sublease disposition and restructuring",
-      "Build-to-suit project representation",
-      "Lease audit and compliance review",
-    ],
-  },
-  {
-    icon: Target,
+    icon: ClipboardList,
     title: "Strategic Planning",
     description:
-      "We develop long-term real estate strategies that align with your business objectives, growth plans, and financial targets.",
+      "We develop a comprehensive strategic plan tailored to your specific needs, timeline, and objectives.",
     bullets: [
-      "Occupancy cost analysis and benchmarking",
-      "Space utilization and workplace strategy",
-      "Market timing and opportunity assessment",
-      "Lease portfolio optimization",
-      "Capital planning and budgeting support",
+      "Project Charter",
+      "Needs Assessment",
+      "Budget Development",
+      "Cost & Risk Reduction",
+      "Critical Dates",
+      "Client Approval",
     ],
   },
   {
-    icon: Briefcase,
-    title: "Portfolio Services",
+    icon: FileSearch,
+    title: "Transaction Services",
     description:
-      "For organizations with multiple locations, we provide centralized portfolio management to maximize efficiency and minimize costs across all your real estate holdings.",
+      "Our transaction team manages every detail of your real estate search and lease process from start to finish.",
     bullets: [
-      "Multi-market lease administration",
-      "Critical date management and tracking",
-      "Portfolio performance reporting",
-      "Consolidation and expansion planning",
-      "Risk assessment and mitigation",
+      "Lease Abstract / Assessments",
+      "Space Programming / Projections",
+      "Employee & Customer Scattergrams",
+      "Demographic Research",
+      "Market Survey & Site Selection",
+      "Virtual Tours",
+      "Building & Premises Evaluations",
+      "Site Comparison Summaries",
     ],
   },
   {
     icon: Handshake,
-    title: "Transaction Services",
+    title: "Business Point Negotiations",
     description:
-      "We manage every aspect of your real estate transactions, from initial requirements gathering through lease execution and post-occupancy support.",
+      "Our experienced negotiators work aggressively to secure the most favorable terms on your behalf.",
     bullets: [
-      "Requirements analysis and space programming",
-      "Site selection and market surveys",
-      "Financial analysis and comparison modeling",
-      "Lease document review and negotiation",
-      "Construction and move management coordination",
+      "Financial Analysis",
+      "Municipal Incentives",
+      "Weekly Status Reports",
+      "Design & Construction Management",
+      "Move Coordination",
+      "Disposition Strategy & Implementation",
     ],
   },
   {
-    icon: Search,
-    title: "Market Analysis",
+    icon: ShieldCheck,
+    title: "Protective Services",
     description:
-      "Our research team provides comprehensive market intelligence to ensure you make informed decisions backed by current data.",
+      "We protect your interests throughout the lease term with ongoing monitoring and administration.",
     bullets: [
-      "Competitive market surveys and rent comparables",
-      "Submarket trend analysis and forecasting",
-      "Demographic and labor market studies",
-      "Supply and demand modeling",
-      "Investment and disposition analysis",
-    ],
-  },
-  {
-    icon: BarChart3,
-    title: "Financial Advisory",
-    description:
-      "We provide sophisticated financial analysis to help you understand the total cost of occupancy and identify opportunities for savings.",
-    bullets: [
-      "Net present value and IRR analysis",
-      "Lease vs. buy evaluation",
-      "Operating expense audit and review",
-      "Tax incentive and abatement research",
-      "Capital improvement funding strategies",
+      "Letter of Intent",
+      "Lease Review & Negotiations",
+      "Operating Expense Audits",
+      "Document Tracking & Administration",
     ],
   },
 ];
 
 export default function Services() {
-  usePageTitle("Services - GuardianUSA", "Comprehensive tenant representation and commercial real estate advisory services.");
+  usePageTitle("Services - Guardian Commercial Realty", "Understanding your needs and protecting your interests with comprehensive commercial real estate services.");
 
   return (
     <Layout>
@@ -107,10 +83,10 @@ export default function Services() {
               Our Services
             </p>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground font-serif mb-4" data-testid="text-services-title">
-              How We Serve You
+              Understanding Your Needs - Protecting Your Interests
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed">
-              GuardianUSA offers a comprehensive suite of commercial real estate advisory services, all designed with one principle: protecting and advancing the tenant's interests.
+              Guardian works with you to develop and implement a specifically tailored strategic plan. Guardian's process is based upon your company's objectives, acceptable risk tolerances, and relieves you of significant responsibility and burden. Our comprehensive due diligence transforms challenge into opportunity and ensures prompt attention to your needs. This translates into significant savings of time and expense.
             </p>
           </div>
         </div>

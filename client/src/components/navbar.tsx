@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
-import { Menu, X, Shield } from "lucide-react";
+import { Menu, X, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -20,11 +20,16 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border" data-testid="navbar">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="flex items-center gap-2 no-underline" data-testid="link-home-logo">
-            <Shield className="h-8 w-8 text-primary" />
-            <span className="text-xl lg:text-2xl font-bold text-primary tracking-tight font-serif">
-              GuardianUSA
-            </span>
+          <Link href="/" className="flex items-center gap-2.5 no-underline" data-testid="link-home-logo">
+            <Building2 className="h-8 w-8 text-primary" />
+            <div className="flex flex-col leading-none">
+              <span className="text-xl lg:text-2xl font-bold text-primary tracking-wide font-serif uppercase">
+                Guardian
+              </span>
+              <span className="text-[10px] lg:text-xs text-muted-foreground tracking-[0.2em] uppercase">
+                The Tenant's Advocate
+              </span>
+            </div>
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
@@ -53,6 +58,9 @@ export default function Navbar() {
             variant="ghost"
             className="lg:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav-menu"
             data-testid="button-mobile-menu"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -61,7 +69,7 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden border-t border-border bg-background" data-testid="mobile-menu">
+        <div id="mobile-nav-menu" className="lg:hidden border-t border-border bg-background" data-testid="mobile-menu">
           <div className="px-4 py-3 space-y-1">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)}>
