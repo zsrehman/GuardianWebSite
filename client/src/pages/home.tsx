@@ -126,11 +126,14 @@ export default function Home() {
               </div>
             </div>
             <div className="hidden lg:block">
-              <img
-                src="/images/robert-chavez-new.jpg"
-                alt="Robert F. Chavez - President and CEO"
-                className="rounded-lg max-h-[420px] object-cover object-top mx-auto shadow-2xl"
-              />
+              <div className="relative rounded-lg overflow-hidden max-w-sm mx-auto">
+                <img
+                  src="/images/robert-chavez-new.jpg"
+                  alt="Robert F. Chavez - President and CEO"
+                  className="w-full max-h-[420px] object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-primary/40 mix-blend-color" />
+              </div>
             </div>
           </div>
         </div>
