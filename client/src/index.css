@@ -26,7 +26,7 @@
   --popover: 220 8% 94%;
   --popover-foreground: 220 15% 15%;
   --popover-border: 220 8% 86%;
-  --primary: 215 85% 35%;
+  --primary: 215 70% 22%;
   --primary-foreground: 215 20% 98%;
   --secondary: 220 10% 90%;
   --secondary-foreground: 220 15% 20%;
@@ -43,8 +43,8 @@
   --chart-3: 30 80% 45%;
   --chart-4: 280 70% 42%;
   --chart-5: 150 75% 38%;
-  --font-sans: Open Sans, sans-serif;
-  --font-serif: Georgia, serif;
+  --font-sans: Inter, sans-serif;
+  --font-serif: Playfair Display, Georgia, serif;
   --font-mono: Menlo, monospace;
   --radius: .5rem;
   --shadow-2xs: 0px 2px 0px 0px hsl(220 8% 50% / 0.05);
