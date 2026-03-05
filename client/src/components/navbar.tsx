@@ -21,15 +21,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link href="/" className="flex items-center gap-2.5 no-underline" data-testid="link-home-logo">
-            <Building2 className="h-8 w-8 text-primary" />
-            <div className="flex flex-col leading-none">
-              <span className="text-xl lg:text-2xl font-bold text-primary tracking-wide font-serif uppercase">
-                Guardian
-              </span>
-              <span className="text-[10px] lg:text-xs text-muted-foreground tracking-[0.2em] uppercase">
-                The Tenant's Advocate
-              </span>
-            </div>
+            <img src="/logo.png" alt="Guardian Commercial Realty" className="h-10 lg:h-12 w-auto object-contain" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
