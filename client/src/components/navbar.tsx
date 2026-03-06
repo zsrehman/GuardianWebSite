@@ -19,12 +19,12 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border" data-testid="navbar">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-32 lg:h-40">
           <Link href="/" className="flex items-center no-underline" data-testid="link-home-logo">
             <img 
               src="/logo.png" 
               alt="Guardian Commercial Realty" 
-              className="h-12 lg:h-16 w-auto object-contain hover:opacity-90 transition-opacity" 
+              className="h-28 lg:h-36 w-auto object-contain hover:opacity-90 transition-opacity" 
             />
           </Link>
 
