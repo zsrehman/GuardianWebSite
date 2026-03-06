@@ -40,7 +40,7 @@ export default function Navbar() {
             <img 
               src="/logo.png" 
               alt="Guardian Commercial Realty" 
-              className="h-full w-auto object-contain hover:opacity-90 transition-all duration-300 mix-blend-multiply dark:mix-blend-screen" 
+              className="h-full w-auto object-contain hover:opacity-90 transition-all duration-300" 
             />
           </Link>
 
