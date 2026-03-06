@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -15,16 +15,32 @@ const navLinks = [
 export default function Navbar() {
   const [location] = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border" data-testid="navbar">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-32 lg:h-40">
-          <Link href="/" className="flex items-center no-underline" data-testid="link-home-logo">
+    <nav 
+      className={`sticky top-0 z-50 transition-all duration-300 border-b ${
+        isScrolled 
+          ? "bg-background/80 backdrop-blur-md border-border h-16 lg:h-20" 
+          : "bg-background border-transparent h-24 lg:h-32"
+      }`} 
+      data-testid="navbar"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div className="flex items-center justify-between h-full">
+          <Link href="/" className="flex items-center no-underline h-full py-2" data-testid="link-home-logo">
             <img 
               src="/logo.png" 
               alt="Guardian Commercial Realty" 
-              className="h-28 lg:h-36 w-auto object-contain hover:opacity-90 transition-opacity" 
+              className="h-full w-auto object-contain hover:opacity-90 transition-all duration-300 mix-blend-multiply dark:mix-blend-screen" 
             />
           </Link>
 
