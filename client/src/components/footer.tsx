@@ -10,17 +10,25 @@ export default function Footer() {
             <div className="flex items-center gap-2.5 mb-4">
               <Building2 className="h-7 w-7" />
               <div className="flex flex-col leading-none">
-                <span className="text-lg font-bold font-serif uppercase tracking-wide">Guardian</span>
-                <span className="text-[9px] tracking-[0.2em] uppercase opacity-70">The Tenant's Advocate</span>
+                <span className="text-lg font-bold font-serif uppercase tracking-wide">
+                  Guardian
+                </span>
+                <span className="text-[9px] tracking-[0.2em] uppercase opacity-70">
+                  The Tenant's Advocate
+                </span>
               </div>
             </div>
             <p className="text-sm leading-relaxed opacity-80">
-              Guardian Commercial Realty exclusively represents the interests of companies seeking to lease or purchase commercial property. We never represent landlords.
+              Guardian Commercial Realty exclusively represents the interests of
+              companies seeking to lease or purchase commercial property. We
+              never represent landlords.
             </p>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 opacity-90">Quick Links</h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 opacity-90">
+              Quick Links
+            </h4>
             <ul className="space-y-2.5">
               {[
                 { href: "/", label: "Home" },
@@ -30,7 +38,11 @@ export default function Footer() {
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm opacity-70 hover:opacity-100 transition-opacity no-underline text-primary-foreground" data-testid={`link-footer-${link.label.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <Link
+                    href={link.href}
+                    className="text-sm opacity-70 hover:opacity-100 transition-opacity no-underline text-primary-foreground"
+                    data-testid={`link-footer-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -39,11 +51,22 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 opacity-90">Services</h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 opacity-90">
+              Services
+            </h4>
             <ul className="space-y-2.5">
-              {["Strategic Planning", "Transaction Services", "Protective Services", "Business Point Negotiations", "Financial Analysis"].map((s) => (
+              {[
+                "Strategic Planning",
+                "Transaction Services",
+                "Protective Services",
+                "Business Point Negotiations",
+                "Financial Analysis",
+              ].map((s) => (
                 <li key={s}>
-                  <Link href="/services" className="text-sm opacity-70 hover:opacity-100 transition-opacity no-underline text-primary-foreground">
+                  <Link
+                    href="/services"
+                    className="text-sm opacity-70 hover:opacity-100 transition-opacity no-underline text-primary-foreground"
+                  >
                     {s}
                   </Link>
                 </li>
@@ -52,11 +75,19 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 opacity-90">Contact</h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 opacity-90">
+              Contact
+            </h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0 opacity-70" />
-                <span className="text-sm opacity-80">10940 Wilshire Boulevard<br />Suite 925<br />Los Angeles, CA 90024</span>
+                <span className="text-sm opacity-80">
+                  100 Wilshire Boulevard
+                  <br />
+                  Suite 700
+                  <br />
+                  Santa Monica, CA 90401
+                </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 shrink-0 opacity-70" />
@@ -72,13 +103,21 @@ export default function Footer() {
 
         <div className="border-t border-primary-foreground/15 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs opacity-60" data-testid="text-copyright">
-            &copy; {new Date().getFullYear()} Guardian Commercial Realty. All rights reserved.
+            &copy; {new Date().getFullYear()} Guardian Commercial Realty. All
+            rights reserved.
           </p>
           <div className="flex gap-4">
-            <Link href="/privacy" className="text-xs opacity-60 hover:opacity-100 transition-opacity no-underline text-primary-foreground" data-testid="link-footer-privacy">
+            <Link
+              href="/privacy"
+              className="text-xs opacity-60 hover:opacity-100 transition-opacity no-underline text-primary-foreground"
+              data-testid="link-footer-privacy"
+            >
               Privacy Policy
             </Link>
-            <Link href="/contact" className="text-xs opacity-60 hover:opacity-100 transition-opacity no-underline text-primary-foreground">
+            <Link
+              href="/contact"
+              className="text-xs opacity-60 hover:opacity-100 transition-opacity no-underline text-primary-foreground"
+            >
               Contact Us
             </Link>
           </div>
