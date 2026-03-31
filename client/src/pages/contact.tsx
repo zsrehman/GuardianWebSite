@@ -22,7 +22,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { MapPin, Phone, Mail, Clock, CheckCircle2, Send, Briefcase } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  CheckCircle2,
+  Send,
+  Briefcase,
+} from "lucide-react";
 import { usePageTitle } from "@/hooks/use-page-title";
 
 const contactSchema = z.object({
@@ -38,7 +46,10 @@ const contactSchema = z.object({
 type ContactForm = z.infer<typeof contactSchema>;
 
 export default function Contact() {
-  usePageTitle("Contact - Guardian Commercial Realty", "Contact Guardian Commercial Realty for a confidential consultation about your commercial real estate needs.");
+  usePageTitle(
+    "Contact - Guardian Commercial Realty",
+    "Contact Guardian Commercial Realty for a confidential consultation about your commercial real estate needs.",
+  );
   const [submitted, setSubmitted] = useState(false);
 
   const form = useForm<ContactForm>({
@@ -62,13 +73,19 @@ export default function Contact() {
     return (
       <Layout>
         <section className="py-24 lg:py-32">
-          <div className="max-w-lg mx-auto px-4 text-center" data-testid="contact-success">
+          <div
+            className="max-w-lg mx-auto px-4 text-center"
+            data-testid="contact-success"
+          >
             <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-6">
               <CheckCircle2 className="h-8 w-8 text-green-600 dark:text-green-400" />
             </div>
-            <h2 className="text-2xl font-bold text-foreground mb-3">Thank You</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-3">
+              Thank You
+            </h2>
             <p className="text-muted-foreground leading-relaxed">
-              We have received your message and will get back to you shortly. Thank you for your interest in Guardian Commercial Realty.
+              We have received your message and will get back to you shortly.
+              Thank you for your interest in Guardian Commercial Realty.
             </p>
           </div>
         </section>
@@ -84,11 +101,15 @@ export default function Contact() {
             <p className="text-primary-foreground/70 text-sm font-semibold uppercase tracking-widest mb-3">
               Contact Us
             </p>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground font-serif mb-4" data-testid="text-contact-title">
+            <h1
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground font-serif mb-4"
+              data-testid="text-contact-title"
+            >
               Get in Touch
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed">
-              Contact us for a confidential consultation about your commercial real estate needs.
+              Contact us for a confidential consultation about your commercial
+              real estate needs.
             </p>
           </div>
         </div>
@@ -98,11 +119,19 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             <div className="lg:col-span-2">
-              <h2 className="text-2xl font-bold text-foreground font-serif mb-6">Send a Message</h2>
-              <Card className="border-border/50" data-testid="card-contact-form">
+              <h2 className="text-2xl font-bold text-foreground font-serif mb-6">
+                Send a Message
+              </h2>
+              <Card
+                className="border-border/50"
+                data-testid="card-contact-form"
+              >
                 <CardContent className="p-6 lg:p-8">
                   <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+                    <form
+                      onSubmit={form.handleSubmit(onSubmit)}
+                      className="space-y-5"
+                    >
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <FormField
                           control={form.control}
@@ -111,7 +140,11 @@ export default function Contact() {
                             <FormItem>
                               <FormLabel>First Name *</FormLabel>
                               <FormControl>
-                                <Input placeholder="John" {...field} data-testid="input-first-name" />
+                                <Input
+                                  placeholder="John"
+                                  {...field}
+                                  data-testid="input-first-name"
+                                />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -124,7 +157,11 @@ export default function Contact() {
                             <FormItem>
                               <FormLabel>Last Name *</FormLabel>
                               <FormControl>
-                                <Input placeholder="Smith" {...field} data-testid="input-last-name" />
+                                <Input
+                                  placeholder="Smith"
+                                  {...field}
+                                  data-testid="input-last-name"
+                                />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -139,7 +176,11 @@ export default function Contact() {
                           <FormItem>
                             <FormLabel>Company / Organization</FormLabel>
                             <FormControl>
-                              <Input placeholder="Your company name" {...field} data-testid="input-company" />
+                              <Input
+                                placeholder="Your company name"
+                                {...field}
+                                data-testid="input-company"
+                              />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -154,7 +195,11 @@ export default function Contact() {
                             <FormItem>
                               <FormLabel>Telephone Number</FormLabel>
                               <FormControl>
-                                <Input placeholder="(310) 555-0100" {...field} data-testid="input-phone" />
+                                <Input
+                                  placeholder="(310) 555-0100"
+                                  {...field}
+                                  data-testid="input-phone"
+                                />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -167,7 +212,12 @@ export default function Contact() {
                             <FormItem>
                               <FormLabel>Email *</FormLabel>
                               <FormControl>
-                                <Input type="email" placeholder="john@company.com" {...field} data-testid="input-email" />
+                                <Input
+                                  type="email"
+                                  placeholder="john@company.com"
+                                  {...field}
+                                  data-testid="input-email"
+                                />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -181,7 +231,10 @@ export default function Contact() {
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel>Preferred Method of Contact</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <Select
+                              onValueChange={field.onChange}
+                              defaultValue={field.value}
+                            >
                               <FormControl>
                                 <SelectTrigger data-testid="select-contact-method">
                                   <SelectValue placeholder="Select preferred method" />
@@ -216,7 +269,12 @@ export default function Contact() {
                         )}
                       />
 
-                      <Button type="submit" size="lg" className="w-full sm:w-auto" data-testid="button-submit">
+                      <Button
+                        type="submit"
+                        size="lg"
+                        className="w-full sm:w-auto"
+                        data-testid="button-submit"
+                      >
                         <Send className="mr-2 h-4 w-4" />
                         Submit
                       </Button>
@@ -227,18 +285,27 @@ export default function Contact() {
             </div>
 
             <div className="space-y-6">
-              <Card className="border-border/50" data-testid="card-contact-info">
+              <Card
+                className="border-border/50"
+                data-testid="card-contact-info"
+              >
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-foreground mb-4">By Mail</h3>
+                  <h3 className="text-lg font-bold text-foreground mb-4">
+                    By Mail
+                  </h3>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-sm font-medium text-foreground">Guardian Commercial Realty</p>
+                        <p className="text-sm font-medium text-foreground">
+                          Guardian Commercial Realty
+                        </p>
                         <p className="text-sm text-muted-foreground">
-                          10940 Wilshire Boulevard<br />
-                          Suite 925<br />
-                          Los Angeles, CA 90024
+                          100 Wilshire Boulevard
+                          <br />
+                          Suite 700
+                          <br />
+                          Santa Monica, CA 90401
                         </p>
                       </div>
                     </div>
@@ -246,23 +313,33 @@ export default function Contact() {
                 </CardContent>
               </Card>
 
-              <Card className="border-border/50" data-testid="card-contact-phone">
+              <Card
+                className="border-border/50"
+                data-testid="card-contact-phone"
+              >
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-foreground mb-4">By Phone</h3>
+                  <h3 className="text-lg font-bold text-foreground mb-4">
+                    By Phone
+                  </h3>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <Phone className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                       <div>
                         <p className="text-sm text-muted-foreground">
-                          <span className="font-medium text-foreground">Main Office:</span><br />
-                          310.882.2050
+                          <span className="font-medium text-foreground">
+                            Main Office:
+                          </span>
+                          <br />
+                          310-917-1017
                         </p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Mail className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-sm text-muted-foreground">info@guardianusa.net</p>
+                        <p className="text-sm text-muted-foreground">
+                          info@guardianusa.net
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -271,13 +348,19 @@ export default function Contact() {
 
               <Card className="border-border/50" data-testid="card-employment">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-foreground mb-3">Employment Opportunities</h3>
+                  <h3 className="text-lg font-bold text-foreground mb-3">
+                    Employment Opportunities
+                  </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                    Guardian is currently seeking energetic self-motivated individuals interested in a real estate career representing commercial office and industrial tenants.
+                    Guardian is currently seeking energetic self-motivated
+                    individuals interested in a real estate career representing
+                    commercial office and industrial tenants.
                   </p>
                   <div className="flex items-center gap-2">
                     <Briefcase className="h-4 w-4 text-primary" />
-                    <span className="text-sm text-primary font-medium">jobs@guardianusa.net</span>
+                    <span className="text-sm text-primary font-medium">
+                      jobs@guardianusa.net
+                    </span>
                   </div>
                 </CardContent>
               </Card>
@@ -287,9 +370,12 @@ export default function Contact() {
                   <div className="flex items-start gap-3">
                     <Clock className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                     <div>
-                      <h3 className="text-lg font-bold text-foreground mb-1">Business Hours</h3>
+                      <h3 className="text-lg font-bold text-foreground mb-1">
+                        Business Hours
+                      </h3>
                       <p className="text-sm text-muted-foreground">
-                        Monday - Friday<br />
+                        Monday - Friday
+                        <br />
                         8:00 AM - 6:00 PM PST
                       </p>
                     </div>
